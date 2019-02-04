@@ -1,0 +1,26 @@
+{
+    "ru": {
+        "apples_ru": {
+            "ONE": "яблоко",
+            "FEW": "яблока",
+            "MANY": "яблок"
+        },
+        "glasses_ru": {
+            "ONE": "пара очков",
+            "FEW": "пары очков",
+            "MANY": "пар очков"
+        }
+    },
+    "en": {
+        "apples": {
+            "ONE": "apple",
+            "FEW": "apples",
+            "MANY": "apples"
+        },
+        "glasses": {
+            "ONE": "glasses",
+            "FEW": "glasses",
+            "MANY": "glasses"
+        }
+    }
+}
