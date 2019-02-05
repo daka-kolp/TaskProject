@@ -25,7 +25,7 @@ public class RuVocabulary extends Vocabulary {
     @Override
     public String getProduct(String typeProduct, int count) {
         JSONObject product = (JSONObject) ruVocabulary.get(typeProduct);
-        String value = product.get(getQuantity(count)).toString();
-        return count + " " + value;
+        String type = product.get(getQuantity(count)).toString();
+        return count + " " + type;
     }
 }
