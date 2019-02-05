@@ -1,11 +1,11 @@
 {
     "ru": {
-        "apples_ru": {
+        "apples": {
             "ONE": "яблоко",
             "FEW": "яблока",
             "MANY": "яблок"
         },
-        "glasses_ru": {
+        "glasses": {
             "ONE": "пара очков",
             "FEW": "пары очков",
             "MANY": "пар очков"
