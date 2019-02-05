@@ -1,5 +1,7 @@
 package com.dkolp.vocabularies;
 
+import com.dkolp.vocabularies.constants.QuantityKeys;
+import com.dkolp.vocabularies.constants.TranslationKeys;
 import org.json.simple.JSONObject;
 
 public class EnVocabulary extends Vocabulary {
@@ -11,17 +13,17 @@ public class EnVocabulary extends Vocabulary {
             enVocabulary = (JSONObject) mJsonFile.get(TranslationKeys.EN);
     }
 
-    private String getQuantity(int count) {
-        if (count == 1)
-            return "ONE";
-        else
-            return "MANY";
-    }
     @Override
-    public String getProductText(String typeProduct, int count) {
-        JSONObject product = (JSONObject) enVocabulary.get(typeProduct);
-        String type = product.get(getQuantity(count)).toString();
-        return count + " " + type;
+    protected JSONObject getJsonProduct(String typeProduct) {
+        return (JSONObject) enVocabulary.get(typeProduct);
+    }
+
+    @Override
+    protected String getQuantity(int count) {
+        if (count == 1)
+            return QuantityKeys.ONE;
+        else
+            return QuantityKeys.DEFAULT;
     }
 
 }

@@ -1,4 +1,4 @@
-package com.dkolp.vocabularies;
+package com.dkolp.vocabularies.constants;
 
 public interface TypeProductKeys {
     String APPLE = "apples";

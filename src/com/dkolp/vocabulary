@@ -3,24 +3,21 @@
         "apples": {
             "ONE": "яблоко",
             "FEW": "яблока",
-            "MANY": "яблок"
+            "DEFAULT": "яблок"
         },
         "glasses": {
             "ONE": "пара очков",
             "FEW": "пары очков",
-            "MANY": "пар очков"
+            "DEFAULT": "пар очков"
         }
     },
     "en": {
         "apples": {
             "ONE": "apple",
-            "FEW": "apples",
-            "MANY": "apples"
+            "DEFAULT": "apples"
         },
         "glasses": {
-            "ONE": "glasses",
-            "FEW": "glasses",
-            "MANY": "glasses"
+            "DEFAULT": "glasses"
         }
     }
 }
