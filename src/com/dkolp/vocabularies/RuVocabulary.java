@@ -1,4 +1,4 @@
-package com.dkolp;
+package com.dkolp.vocabularies;
 
 import org.json.simple.JSONObject;
 
@@ -8,7 +8,7 @@ public class RuVocabulary extends Vocabulary {
 
     public RuVocabulary() {
         if (mJsonFile != null)
-            ruVocabulary = (JSONObject) mJsonFile.get(Vocabulary.RU);
+            ruVocabulary = (JSONObject) mJsonFile.get(TranslationKeys.RU);
     }
 
     private String getQuantity(int count) {
@@ -23,7 +23,7 @@ public class RuVocabulary extends Vocabulary {
     }
 
     @Override
-    public String getProduct(String typeProduct, int count) {
+    public String getProductText(String typeProduct, int count) {
         JSONObject product = (JSONObject) ruVocabulary.get(typeProduct);
         String type = product.get(getQuantity(count)).toString();
         return count + " " + type;

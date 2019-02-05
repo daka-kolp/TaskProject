@@ -1,4 +1,4 @@
-package com.dkolp;
+package com.dkolp.vocabularies;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -8,13 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public abstract class Vocabulary {
-    private static final String FILE_URL = "/home/darya/MyDirectory/my_projects/IdeaProjects/TaskProject/out/production/TaskProject/com/dkolp/vocabulary";
-
-    public static final String EN = "en";
-    public static final String RU = "ru";
-
-    static final String APPLE = "apples";
-    static final String GLASSES = "glasses";
+    private static final String FILE_URL = "/home/darya/MyDirectory/my_projects/IdeaProjects/TaskProject/src/com/dkolp/vocabulary";
 
     protected JSONObject mJsonFile;
 
@@ -27,15 +21,15 @@ public abstract class Vocabulary {
     }
 
     public static Vocabulary createVocabularyByTag(String tag) {
-        if (tag.equals(RU))
+        if (tag.equals(TranslationKeys.RU))
             return new RuVocabulary();
-        else if (tag.equals(EN))
+        else if (tag.equals(TranslationKeys.EN))
             return new EnVocabulary();
         else
             throw new RuntimeException("incorrect language tag");
     }
 
-    public abstract String getProduct(String typeProduct, int count);
+    public abstract String getProductText(String typeProduct, int count);
 
 
 }
